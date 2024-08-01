@@ -1,0 +1,23 @@
+trunk-version = "^0.20.2"
+
+[build]
+# target = "web/dist/index.html"
+
+[watch]
+watch = [
+  "src",
+  "Cargo.toml",
+  "web/dist",
+]
+ignore = [
+]
+
+[[hooks]]
+stage = "pre_build"
+command = "bash"
+command_arguments = ["-c", "cp web/dist/index.html index.html"]
+
+[[hooks]]
+stage = "build"
+command = "bash"
+command_arguments = ["-c", "cp -r web/dist/* $TRUNK_STAGING_DIR/"]

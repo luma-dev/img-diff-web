@@ -11,4 +11,9 @@ image = "0.25.2"
 leptos = { version = "0.6.12", features = ["csr", "nightly"] }
 [dependencies.web-sys]
 version = "0.3.69"
-features = ["File", "FileList"]
+features = [
+  "File",
+  "FileList",
+  "BlobPropertyBag",
+  "Window",
+]
