@@ -1,0 +1,14 @@
+[package]
+name = "img-diff-web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+futures = "0.3.30"
+garde = { version = "0.20.0", features = ["derive"] }
+image = "0.25.2"
+leptos = { version = "0.6.12", features = ["csr", "nightly"] }
+[dependencies.web-sys]
+version = "0.3.69"
+features = ["File", "FileList"]
