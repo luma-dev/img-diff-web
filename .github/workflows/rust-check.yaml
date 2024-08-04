@@ -14,9 +14,12 @@ jobs:
         with:
           # Confirmed with 1.81.0-nightly
           toolchain: nightly
+          components: clippy, rustfmt
       - name: Install Leptosfmt
         run: cargo install leptosfmt
-      - name: Leptosfmt
-        run: leptosfmt --check '**/*.rs'
       - name: Clippy
         run: cargo clippy --all-targets --all-features -- -D warnings
+      - name: Leptosfmt
+        run: leptosfmt --check '**/*.rs'
+      - name: Rustfmt
+        run: cargo fmt --all -- --check
