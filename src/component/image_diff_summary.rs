@@ -39,6 +39,7 @@ pub fn ImageDiffSummary(info: impl Fn() -> ImageDiffSumaryInfo + 'static) -> imp
                 )
                 .unwrap();
                 expose_to_window(&blob, "blob").unwrap();
+                // TODO(memory leak): data_url should be freed.
                 let data_url = web_sys::Url::create_object_url_with_blob(&blob).unwrap();
                 view! {
                     <>

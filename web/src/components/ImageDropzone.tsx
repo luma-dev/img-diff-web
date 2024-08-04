@@ -95,6 +95,7 @@ export default function ImageDropzone({ onImageSelected }: ImageDropzoneProps) {
 }
 
 function SelectedImage({ image }: { image: File }) {
+  // TODO(memory leak): data_url should be freed.
   const src = useMemo(() => URL.createObjectURL(image), [image]);
   return (
     <div>
