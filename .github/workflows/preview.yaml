@@ -19,6 +19,7 @@ jobs:
         with:
           # Confirmed with 1.81.0-nightly
           toolchain: nightly
+          target: wasm32-unknown-unknown
       - name: Install Trunk
         run: |
           cargo install trunk@0.20.2
