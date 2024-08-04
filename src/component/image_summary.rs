@@ -36,7 +36,7 @@ pub fn ImageSummary(
                                     <span>{format!(" ({pixels} pixels)")}</span>
                                 </p>
                                 <p>Format: {format}</p>
-                                <p>Size: {size} bytes</p>
+                                <p>Size: {size}bytes</p>
                             </ion-card-content>
                         </ion-card>
                     </>
@@ -45,7 +45,7 @@ pub fn ImageSummary(
             Err(err) => {
                 view! {
                     <>
-                        <ImageSummaryError err=move || err.clone()/>
+                        <ImageSummaryError err=move || err.clone() />
                     </>
                 }
             }

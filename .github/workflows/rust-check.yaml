@@ -15,7 +15,7 @@ jobs:
           # Confirmed with 1.81.0-nightly
           toolchain: nightly
       - name: Install Leptosfmt
-        run: cargo install leptosfmt@0.1.18
+        run: cargo install leptosfmt
       - name: Leptosfmt
         run: leptosfmt --check '**/*.rs'
       - name: Clippy

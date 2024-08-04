@@ -35,7 +35,7 @@ pub fn ImageLoader(
     };
     view! {
         <div style:width="320px">
-            <ImageDropzone on_image_selected=on_image_selected/>
+            <ImageDropzone on_image_selected=on_image_selected />
             <ion-select label="Image Format" value=image_format on:ionChange=on_change>
                 <ion-select-option value="auto:">(Auto)</ion-select-option>
                 {options}

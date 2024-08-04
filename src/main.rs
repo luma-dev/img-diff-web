@@ -11,8 +11,8 @@ fn main() {
 
     mount_to_body(|| {
         view! {
-            <SetupIonic/>
-            <App/>
+            <SetupIonic />
+            <App />
         }
     });
 }
@@ -130,8 +130,8 @@ fn App() -> impl IntoView {
                     style:flex-direction="row"
                     style:justify-content="center"
                 >
-                    <ImageSummary info=move || image1().clone() image_name="First Image".into()/>
-                    <ImageSummary info=move || image2().clone() image_name="Second Image".into()/>
+                    <ImageSummary info=move || image1().clone() image_name="First Image".into() />
+                    <ImageSummary info=move || image2().clone() image_name="Second Image".into() />
                 </div>
                 <div
                     style:display="flex"
@@ -140,7 +140,7 @@ fn App() -> impl IntoView {
                     style:flex-direction="row"
                     style:justify-content="center"
                 >
-                    <ImageDiffSummary info=diff_info/>
+                    <ImageDiffSummary info=diff_info />
                 </div>
             </ion-content>
         </ion-app>

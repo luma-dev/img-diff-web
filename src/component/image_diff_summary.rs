@@ -51,7 +51,7 @@ pub fn ImageDiffSummary(info: impl Fn() -> ImageDiffSumaryInfo + 'static) -> imp
                                 <p>{format!("{} different pixels", diff_pixel_count)}</p>
 
                                 {if *diff_pixel_count > 0 {
-                                    Some(view! { <img src=data_url style:width="100%"/> })
+                                    Some(view! { <img src=data_url style:width="100%" /> })
                                 } else {
                                     None
                                 }}
@@ -64,7 +64,7 @@ pub fn ImageDiffSummary(info: impl Fn() -> ImageDiffSumaryInfo + 'static) -> imp
             Err(err) => {
                 view! {
                     <>
-                        <ImageDiffSummaryError err=move || err.clone()/>
+                        <ImageDiffSummaryError err=move || err.clone() />
                     </>
                 }
             }
